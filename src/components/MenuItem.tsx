@@ -27,7 +27,7 @@ export default function MenuItem({ item }: Props) {
           {item.description}
         </p>
       </div>
-      
+
       <div className="ml-4">
         {item.imageUrl && (
           <img
@@ -36,15 +36,15 @@ export default function MenuItem({ item }: Props) {
             className="w-24 h-24 rounded-lg object-cover"
           />
         )}
-        
+
         <div className="mt-2">
           {!cartItem ? (
             <button
               onClick={() => addToCart(item)}
-              className="w-full btn btn-primary"
+              className="w-full btn btn-primary relative flex items-center justify-center space-x-2"
             >
-              Add
-              <Plus className="h-4 w-4 ml-1" />
+              <span>Add</span>
+              <Plus className="h-4 w-4" />
             </button>
           ) : (
             <div className="flex items-center justify-center space-x-2">
